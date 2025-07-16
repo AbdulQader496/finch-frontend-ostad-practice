@@ -16,8 +16,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Install dependencies
+      - name: Install npm & dependencies
         run: npm install
+
+      - name: Install yarn 
+        run: npm run build
 
       - name: Run tests
         run: npm run serve
