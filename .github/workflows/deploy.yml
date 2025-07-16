@@ -20,10 +20,7 @@ jobs:
         run: npm install
 
       - name: Install yarn 
-        run: curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add - && 
-             echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list && 
-             sudo apt update && 
-             sudo apt install yarn -y
+        run: sudo apt update
 
       - name: Build application
-        run: npm run build
+        run: pm2 list
