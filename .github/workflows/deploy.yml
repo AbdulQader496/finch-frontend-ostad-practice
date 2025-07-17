@@ -20,5 +20,5 @@ jobs:
         run: |
           pm2 list
           pm2 delete "finch-frontend" || true
-          pm2 start "yarn serve" --name "finch-frontend"
+          pm2 start "npm run serve" --name "finch-frontend"
           pm2 save
